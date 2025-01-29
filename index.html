@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Chat Icon -->
+    <div class="chat-icon" id="chatIcon">
+        <i class="bi bi-chat-dots-fill"></i>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container hidden" id="chatContainer">
+        <div class="chat-header" id="chatHeader">
+            <i class="bi bi-robot me-2"></i>
+            <span>AI Assistant</span>
+        </div>
+        <div class="chat-body" id="chatMessages">
+            <!-- Initial Message -->
+            <div class="message-bubble bot-message">
+                Hello! How can I help you today? Here are some quick suggestions:
+            </div>
+            
+            <!-- Suggested Messages -->
+            <div class="suggestions-container" id="suggestions">
+                <button class="suggestion-btn" onclick="useSuggestion('What can you do?')">
+                    What can you do?
+                </button>
+                <button class="suggestion-btn" onclick="useSuggestion('How does this work?')">
+                    How does this work?
+                </button>
+                <button class="suggestion-btn" onclick="useSuggestion('Show documentation')">
+                    Show documentation
+                </button>
+            </div>
+        </div>
+        <div class="chat-input">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control form-control-sm" 
+                       id="userInput" placeholder="Type a message...">
+                <button class="btn btn-primary btn-sm" onclick="sendMessage()">
+                    <i class="bi bi-send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
